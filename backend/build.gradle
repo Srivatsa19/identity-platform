@@ -23,6 +23,10 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-actuator-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtimeOnly 'org.postgresql:postgresql'
+	implementation 'org.springframework.security:spring-security-crypto'
+	runtimeOnly 'org.bouncycastle:bcprov-jdk18on:1.81'
 }
 
 tasks.named('test') {
