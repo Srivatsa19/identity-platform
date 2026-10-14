@@ -9,12 +9,15 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
+import org.springframework.core.annotation.Order;
+import org.springframework.core.Ordered;
 
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Optional;
 
 @Component
+@Order(Ordered.HIGHEST_PRECEDENCE + 20)
 public class SessionAuthenticationFilter extends OncePerRequestFilter {
 
     private static final String SESSION_COOKIE = "SESSION";
